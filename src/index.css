@@ -1,0 +1,28 @@
+@import "tailwindcss";
+
+.submit__button
+{
+    border: 1px solid #eaeaea;
+    padding:5px 15px;
+    margin-left:40px;
+}
+.form_input
+{
+     border: 1px solid #eaeaea;
+     margin-left:15px;
+     margin-top:5px;
+}
+.email_input
+{
+    border: 1px solid #eaeaea;
+     margin-left:10px;
+
+}
+.container
+{
+    background-color:aquamarine
+}
+.sign_up
+{
+    margin-left:50px;
+}
