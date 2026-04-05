@@ -1,19 +1,34 @@
 import React from 'react'
-import "./index.css"
-import SignUpForm from "./components/SignUpForm.jsx"
-import { useState } from 'react';
+
+import {useState } from 'react';
+import {Route, Routes } from 'react-router-dom';
+import Home from './pages/Home'
+import Auth from './pages/Auth'
+import Checkout from './pages/Checkout'
+import Navbar from './components/Navbar'
+import './App.css';
+import AuthProvider from "./context/AuthContext"
 
 
 
-function App() {
+function App()
+{
+  return(
+    <>
+    <AuthProvider>
+     <div className="app"> 
+      <Navbar />
+      <Routes>
+        <Route path ="/" element ={<Home />} />
+        <Route path = "/auth" element = {<Auth />} />
+        <Route path="/checkout" element = {<Checkout />} />
+        
+      </Routes>
+     </div>
+     </AuthProvider>
+    </>
 
-return(
-  <div> 
-    <SignUpForm/>
-  </div>
-)
-  
-  
+  )
 }
 
 
